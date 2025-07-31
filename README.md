@@ -154,6 +154,7 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 Visit: https://localhost:8080
 ```
+![image alt](https://github.com/Ahmed-wa7eed/Fort_Stack-task/blob/master/argo%20image.png?raw=true)
 ### Get initial password:
 ```
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --decode && echo
