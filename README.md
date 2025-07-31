@@ -98,6 +98,8 @@ Visit: http://localhost:4000
         groups: docker
         append: yes
 ```
+![image alt]()
+
 ## 🐳 Dockerize the Application
 ```
 FROM node:18
