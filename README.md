@@ -184,7 +184,7 @@ spec:
 ```
 kubectl apply -f k8s/argocd-app.yaml -n argocd
 ```
-[! image alt](https://github.com/Ahmed-wa7eed/Fort_Stack-task/blob/master/cd%20image.png?raw=true)
+![image alt](https://github.com/Ahmed-wa7eed/Fort_Stack-task/blob/master/cd%20image.png?raw=true)
 
 
 
