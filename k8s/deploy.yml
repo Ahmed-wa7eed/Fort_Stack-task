@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fortstack
+  labels:
+    app: fortstack
+spec:
+  selector:
+    matchLabels:
+        app: fortstack
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: fortstack
+    spec:
+      containers:
+        - name: fortstack
+          image: ahmed3013/fortstack
+          ports:
+            - containerPort: 4000
+              protocol: TCP
+          imagePullPolicy: Always
+
