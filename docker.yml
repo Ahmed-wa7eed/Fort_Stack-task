@@ -1,0 +1,39 @@
+- name: Configuring Docker
+  hosts: ip
+
+  tasks:
+
+    - name: Adding Docker repository
+      yum_repository:
+        name: Docker
+        description: Docker Repo
+        baseurl: https://download.docker.com/linux/centos/9/x86_64/stable
+        gpgcheck: yes
+        gpgkey: https://download.docker.com/linux/centos/gpg
+
+    - name: Installing Docker package
+      package:
+        name: docker-ce
+        state: latest
+
+    - name: Starting docker service
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Installing pip3 for Python 3
+      package:
+        name: python3-pip
+        state: present
+
+    - name: Installing Docker SDK for python3
+      command: pip3 install docker
+
+    - name: Add user 'ahmed' to docker group
+      user:
+        name: ahmed
+        groups: docker
+        append: yes
+
+
