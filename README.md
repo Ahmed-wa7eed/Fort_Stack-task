@@ -98,7 +98,7 @@ Visit: http://localhost:4000
         groups: docker
         append: yes
 ```
-![image alt]()
+![image alt](https://github.com/Ahmed-wa7eed/Fort_Stack-task/blob/master/Screenshot%202025-07-31%20132826.png?raw=true)
 
 ## 🐳 Dockerize the Application
 ```
